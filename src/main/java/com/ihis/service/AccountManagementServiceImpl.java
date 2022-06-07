@@ -44,12 +44,6 @@ public class AccountManagementServiceImpl implements AccountManagementService {
 	}
 
 	@Override
-	public String softDelAccount(int accountId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public List<CaseWorkersAccountEntity> viewAccounts() {
 
 		return repo.findAll();
@@ -69,9 +63,19 @@ public class AccountManagementServiceImpl implements AccountManagementService {
 	}
 
 	@Override
+	public String softDelAccount(int accountId) {
+		CaseWorkersAccountEntity entity = repo.getById(accountId);
+		entity.setActiveSwitch('N');
+		repo.save(entity);
+		return "SUCCESS";
+	}
+
+	@Override
 	public String softDelPlan(int planId) {
-		// TODO Auto-generated method stub
-		return null;
+		AppPlanEntity entity = planRepo.getById(planId);
+		entity.setActiveSwitch('N');
+		planRepo.save(entity);
+		return "SUCCESS";
 	}
 
 	@Override
