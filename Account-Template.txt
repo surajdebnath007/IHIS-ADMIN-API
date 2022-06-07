@@ -1,0 +1,18 @@
+Hi {FNAME} ,
+<br/>
+
+Your registration is completed as Case Worker.
+Please use below details to login into your account.<br/>
+<br/>
+
+Password : {PWD}<br/>
+<br/>
+
+<a href='http://localhost:4200/Acc?email={EMAIL}'>
+Click Here To login into your Account</a> 
+<br/>
+<br/>
+
+Thanks & Regards,<br/>
+Admin, Department of Health Services.<br/>
+New Jersey State, USA <br/>
